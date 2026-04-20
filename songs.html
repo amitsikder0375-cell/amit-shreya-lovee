@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Songs 🎶</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="heart-layer"></div>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">💗</div>
+        <div>
+          <div style="font-size:14px;line-height:1;font-weight:900;">Amit × Shreya</div>
+          <div style="font-size:11px;opacity:.75;font-weight:800;">Forever & Always</div>
+        </div>
+      </div>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="love.html">Love</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="songs.html">Songs</a>
+        <a href="surprise.html">Surprise</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      
+<div class="hero">
+  <div class="badge"><span class="dot"></span> Love Songs</div>
+  <h1>Our Love Playlist 🎶💗</h1>
+  <p>
+    These songs are the feelings I can't explain in words.
+    Put your earphones and feel my love in every beat 🎀
+  </p>
+</div>
+
+<div class="grid">
+  <div class="card span12">
+    <h2>🎧 Player</h2>
+    <div class="player">
+      <audio id="audio" controls style="width:100%;border-radius:16px;"></audio>
+      <div id="now" style="font-weight:900;opacity:.85;">Select a song 💞</div>
+    </div>
+  </div>
+
+  <div class="card span12">
+    <h2>💗 Songs List</h2>
+    
+    <div class="song">
+      <div class="meta">
+        <div class="title">🎶 Majboor - RaagWorld.mp3</div>
+        <div class="sub">For Amit ❤️ Shreya</div>
+      </div>
+      <button class="btn small" onclick="playSong('Majboor - RaagWorld.mp3')">Play ▶</button>
+    </div>
+    
+    <div class="song">
+      <div class="meta">
+        <div class="title">🎶 Title Track Saiyaara 320 Kbps.mp3</div>
+        <div class="sub">For Amit ❤️ Shreya</div>
+      </div>
+      <button class="btn small" onclick="playSong('Title Track Saiyaara 320 Kbps.mp3')">Play ▶</button>
+    </div>
+    
+    <div class="song">
+      <div class="meta">
+        <div class="title">🎶 stream.mp3</div>
+        <div class="sub">For Amit ❤️ Shreya</div>
+      </div>
+      <button class="btn small" onclick="playSong('stream.mp3')">Play ▶</button>
+    </div>
+    
+  </div>
+</div>
+
+      <div class="footer">Made with 💗 by Amit for Shreya</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  
+<script>
+const audio = document.getElementById("audio");
+const now = document.getElementById("now");
+
+function playSong(file){
+  audio.src = "assets/songs/" + file;
+  now.innerHTML = "Now Playing: <b>" + file + "</b> 💖";
+  audio.play();
+}
+
+// auto play first song
+window.addEventListener("load", ()=>{
+  const first = document.querySelector(".song button");
+  if(first) first.click();
+});
+</script>
+
+</body>
+</html>

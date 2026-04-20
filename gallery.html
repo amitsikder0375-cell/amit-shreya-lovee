@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery 💗</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="heart-layer"></div>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">💗</div>
+        <div>
+          <div style="font-size:14px;line-height:1;font-weight:900;">Amit × Shreya</div>
+          <div style="font-size:11px;opacity:.75;font-weight:800;">Forever & Always</div>
+        </div>
+      </div>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="love.html">Love</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="songs.html">Songs</a>
+        <a href="surprise.html">Surprise</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      
+<div class="hero">
+  <div class="badge"><span class="dot"></span> Our Gallery</div>
+  <h1>Memories with you 📸💗</h1>
+  <p>
+    Every photo of you feels like a soft heartbeat inside my chest.
+    You look like a blessing in every picture.
+  </p>
+</div>
+
+<div class="grid">
+  <div class="card span5">
+    <div class="slideshow" id="slideshow">
+      <div class="slide active" style="background-image:url('assets/photos/compressed_1776612382304.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/photos/compressed_1776612382424.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/photos/compressed_1776612382491.jpg')"></div>
+    </div>
+    <div class="note">
+      🎀 <b>Auto Slideshow</b><br/>
+      This slideshow is like my heart… it keeps replaying you again & again 💞
+    </div>
+  </div>
+
+  <div class="card span7">
+    <h2>💌 Cute Notes</h2>
+    <p class="note">
+      Shreya, you are not just beautiful… you are magic.
+      The way you exist, the way you smile, the way you talk —
+      everything about you feels special.
+      <br/><br/>
+      When I imagine my future, I only see one name in it… <b>Shreya</b>.
+      I want to laugh with you, cry with you, and live with you.
+      <br/><br/>
+      If love had a face, it would look like you.
+      If love had a voice, it would sound like you.
+      And if love had a home, it would be your heart. 💗
+    </p>
+
+    <p class="note">
+      I may not be perfect… but my love is real.
+      I want to be the person who supports you in every situation.
+      I want to be your safe place.
+      <br/><br/>
+      <b>Thank you for coming into my life.</b>
+      I promise to never stop loving you. 💞🎀
+    </p>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card span6">
+    <img class="photo" src="assets/photos/compressed_1776612382304.jpg" alt="Photo 1">
+    <div class="note">💖 You are my favorite view.</div>
+  </div>
+
+  <div class="card span6">
+    <img class="photo" src="assets/photos/compressed_1776612382424.jpg" alt="Photo 2">
+    <div class="note">💗 My heart feels safe with you.</div>
+  </div>
+
+  <div class="card span12">
+    <img class="photo" src="assets/photos/compressed_1776612382491.jpg" alt="Photo 3">
+    <div class="note">🎀 Forever looks beautiful with you.</div>
+  </div>
+</div>
+
+      <div class="footer">Made with 💗 by Amit for Shreya</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  
+<script>
+const slides = document.querySelectorAll("#slideshow .slide");
+let idx = 0;
+setInterval(()=>{
+  slides[idx].classList.remove("active");
+  idx = (idx+1) % slides.length;
+  slides[idx].classList.add("active");
+}, 2500);
+</script>
+
+</body>
+</html>

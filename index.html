@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amit ❤️ Shreya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="heart-layer"></div>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">💗</div>
+        <div>
+          <div style="font-size:14px;line-height:1;font-weight:900;">Amit × Shreya</div>
+          <div style="font-size:11px;opacity:.75;font-weight:800;">Forever & Always</div>
+        </div>
+      </div>
+
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="love.html">Love</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="songs.html">Songs</a>
+        <a href="surprise.html">Surprise</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      
+<div class="hero">
+  <div class="ribbon">🎀 My Love</div>
+  <div class="badge"><span class="dot"></span> Pink Love Website</div>
+  <h1>Hi Shreya 💖</h1>
+  <p>
+    This is a small love world made only for you...<br/>
+    Every heartbeat says just one thing — <b>I love you</b>.
+  </p>
+
+  <div class="typing" id="typing"></div>
+
+  <div class="row" style="margin-top:14px;">
+    <a class="btn" href="love.html">Start Love Journey 💞</a>
+    <a class="btn secondary" href="songs.html">Play Songs 🎶</a>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card span6">
+    <h2>💌 A Cute Note</h2>
+    <p>
+      Shreya, you are my comfort, my happiness, and my favorite feeling.
+      When I talk to you, everything feels right. When I see your smile,
+      my heart becomes calm. You are not just a person to me, you are my
+      whole world. I promise to always care for you, respect you, and love
+      you more every single day.
+    </p>
+  </div>
+
+  <div class="card span6">
+    <h2>🌸 Why I Love You</h2>
+    <p>
+      I love you because you are real, kind, and beautiful in every way.
+      Your voice feels like peace, your presence feels like home.
+      No matter what happens, I want to hold your hand and stay with you.
+      You are my favorite blessing.
+    </p>
+  </div>
+</div>
+
+      <div class="footer">Made with 💗 by Amit for Shreya</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  
+<script>
+const messages = [
+  "Shreya... you are my favorite person 💗",
+  "I love you more than words can explain 💞",
+  "You are my heart, my smile, my peace 🎀",
+  "Forever yours — Amit 💖"
+];
+
+let i=0, j=0;
+const typingEl = document.getElementById("typing");
+
+function type(){
+  if(!typingEl) return;
+  const text = messages[i];
+  typingEl.innerHTML = text.slice(0, j) + '<span class="cursor"></span>';
+  j++;
+
+  if(j <= text.length){
+    setTimeout(type, 55);
+  }else{
+    setTimeout(()=>{
+      j = 0;
+      i = (i+1) % messages.length;
+      type();
+    }, 1100);
+  }
+}
+type();
+</script>
+
+</body>
+</html>
